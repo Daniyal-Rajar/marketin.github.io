@@ -57,7 +57,7 @@ function signInUser() {
     const user = users.find(user => user.email === email && user.password === password);
 
     if (user) {
-        alert('Sign in successful!');
+
     } else {
         const existingUser = users.find(user => user.email === email);
         if (existingUser) {
