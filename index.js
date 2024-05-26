@@ -15,12 +15,17 @@ loginBtn.addEventListener('click', () => {
 
 
 
-let users = [];
 
-function register() {
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const password = document.getElementById('password').value;
+
+
+
+
+let users = [  ];
+
+function registerUser() {
+    const name = document.getElementById('Name').value;
+    const email = document.getElementById('Email').value;
+    const password = document.getElementById('Password').value;
 
     const existingUser = users.find(user => user.email === email);
     if (existingUser) {
@@ -36,14 +41,16 @@ function register() {
 
     users.push(newUser);
 
-    document.getElementById('registrationForm').reset();
+   
 
     alert('Registration successful!');
 
     console.log('Registered User:', newUser);
-}
+};
 
-function signin() {
+
+
+function signInUser() {
     const email = document.getElementById('signInEmail').value;
     const password = document.getElementById('signInPassword').value;
 
@@ -60,4 +67,3 @@ function signin() {
         }
     }
 }
-
